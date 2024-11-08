@@ -24,7 +24,7 @@ script:
   - docker tag reverseproxy lunarcao/reverseproxy
   - docker tag udagram-api-feed lunarcao/udagram-api-feed
   - docker tag udagram-api-user lunarcao/udagram-api-user
-  - docker tag udagram-frontend lunarcao/udagram-frontend:local
+  - docker tag udagram-frontend lunarcao/udagram-frontend:v3
 
 # Tasks to perform after the process is successful. Formatting the Docker username and password as below enables you to programmatically log in without having the password exposed in logs.
 after_success:
@@ -32,4 +32,4 @@ after_success:
   - docker push lunarcao/reverseproxy
   - docker push lunarcao/udagram-api-feed
   - docker push lunarcao/udagram-api-user
-  - docker push lunarcao/udagram-frontend:local
+  - docker push lunarcao/udagram-frontend:v3
